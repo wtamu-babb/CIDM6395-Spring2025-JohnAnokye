@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment
+.env
+venv/
+myenv/
+.envrc
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs and outputs
+#*.log
+#*.csv
+#*.png
+#model_report.txt
+#fraud_predictions*.csv
+#roc_curve.png
+#decision_tree_pipeline.joblib
+
+# IDEs
+.vscode/
+.idea/

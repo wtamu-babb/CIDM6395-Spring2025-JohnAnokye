@@ -1,0 +1,56 @@
+How to Run
+
+4. To run model, cd /c/Users/johna/Capstone_CIDM-6395/fraud_detection_project/fraud_detection
+Then run 'python fraud_detection.py sample_data.csv'
+
+5. To run the test, cd /c/Users/johna/Capstone_CIDM-6395
+Then run 'pytest'
+or 'pytest -p no:warnings' to ignore all warnings
+
+Alternatively, you can cd /c/Users/johna/Capstone_CIDM-6395/fraud_detection_project
+Then run 'pytest tests/'
+or 'pytest -p no:warnings'
+
+
+
+To Intitalize Git In the working folder
+1. Initialize a Git Repository (if not already)
+
+	cd ~/Capstone_CIDM-6395
+	git init
+	
+2. Add a .gitignore File
+	touch .gitignore
+	
+Add the following content:
+	# Python cache
+	__pycache__/
+	*.pyc
+
+	# Environment
+	.env
+	venv/
+	myenv/
+	.envrc
+
+	# Jupyter Notebooks
+	.ipynb_checkpoints/
+
+	# Logs and outputs
+	*.log
+	*.csv
+	*.png
+	model_report.txt
+	fraud_predictions*.csv
+	roc_curve.png
+	decision_tree_pipeline.joblib
+
+	# IDEs
+	.vscode/
+	.idea/
+
+3. Git is initiallized at /c/Users/johna/Capstone_CIDM-6395. Make sure you at this directory to make any git request.
+
+4. Add and Commit Your Files
+	git add .
+	git commit -m "Initial commit: Fraud detection pipeline with tests"
