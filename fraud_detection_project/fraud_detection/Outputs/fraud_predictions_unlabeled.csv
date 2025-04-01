@@ -1,0 +1,3 @@
+type,amount,oldbalanceOrg,newbalanceOrig,oldbalanceDest,newbalanceDest,Predicted_isFraud,Fraud_Probability
+1,1200,5000,3800,100,1300,0,0.5
+4,800,2000,1500,50,400,0,0.5

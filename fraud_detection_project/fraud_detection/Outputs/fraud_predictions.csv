@@ -1,0 +1,2 @@
+type,amount,nameOrig,nameDest,oldbalanceOrg,newbalanceOrig,oldbalanceDest,newbalanceDest,Actual_isFraud,Predicted_isFraud,Fraud_Probability
+CASH_OUT,1000,c290cc716cbfabf958fad3c9659a275c44ab2c916d192f77bec491cf082e7c3a,645b3a5cbcbab76ae0a93b250f24bccc75ea3c6db2e1cf3fd5d131b718956252,5000,4000,1000,2000,0,1,0.5
