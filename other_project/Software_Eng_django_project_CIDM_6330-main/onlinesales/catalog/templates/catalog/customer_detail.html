@@ -1,0 +1,15 @@
+{% extends 'catalog/base_generic.html' %}
+
+{% block title %}{{ customer.first_name }} {{ customer.last_name }} - Customer Details{% endblock %}
+
+{% block content %}
+<div class="customer-detail">
+    <h2>Customer Details: {{ customer.first_name }} {{ customer.last_name }}</h2>
+    <p><strong>Title:</strong> {{ customer.title|default:"N/A" }}</p>
+    <p><strong>Email Address:</strong> {{ customer.email_address }}</p>
+    <p><strong>Phone:</strong> {{ customer.phone }}</p>
+    <p><strong>Address:</strong> {{ customer.address_line1 }}{{ customer.address_line2|default_if_none:"" }}</p>
+    <p><strong>Number of Cars Owned:</strong> {{ customer.number_cars_owned }}</p>
+    <p><strong>Commute Distance:</strong> {{ customer.commute_distance }}</p>
+</div>
+{% endblock %}

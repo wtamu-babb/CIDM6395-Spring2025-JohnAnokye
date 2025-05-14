@@ -1,0 +1,16 @@
+{% extends 'catalog/base_generic.html' %}
+
+{% block title %}{{ product.english_product_name }} - Product Details{% endblock %}
+
+{% block content %}
+<div class="product-detail">
+    <h2>{{ product.english_product_name }}</h2>
+    <p><strong>Subcategory:</strong> {{ product.product_subcategory.english_product_subcategory_name }}</p>
+    <p><strong>Price:</strong> ${{ product.list_price }}</p>
+    <p><strong>Color:</strong> {{ product.color }}</p>
+    <p><strong>Weight:</strong> {{ product.weight_unit_measure_code }}</p>
+    <p><strong>Size:</strong> {{ product.size_unit_measure_code }}</p>
+    <p><strong>Description:</strong> {{ product.english_description }}</p>
+    <p><strong>Status:</strong> {{ product.status }}</p>
+</div>
+{% endblock %}

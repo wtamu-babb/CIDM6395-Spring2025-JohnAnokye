@@ -1,0 +1,10 @@
+{% extends 'catalog/base_generic.html' %}
+
+{% block content %}
+<h2>Register as a New User</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+</form>
+{% endblock %}

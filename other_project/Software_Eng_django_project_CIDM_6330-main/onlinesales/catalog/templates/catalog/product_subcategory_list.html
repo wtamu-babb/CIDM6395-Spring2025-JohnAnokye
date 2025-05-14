@@ -1,0 +1,14 @@
+{% extends 'catalog/base_generic.html' %}
+
+{% block content %}
+<h2>Product Subcategories</h2>
+<ul>
+    {% for subcategory in product_subcategories %}
+    <li>
+        <a href="{% url 'product-subcategory' subcategory.id %}">
+            {{ subcategory.english_product_subcategory_name }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'catalog/base_generic.html' %}
+
+{% block title %}Home - MarketPlace{% endblock %}
+
+{% block content %}
+<h2>Welcome to MarketPlace!</h2>
+
+{% if num_visits %}
+<p>You've visited this page {{ num_visits }} times.</p>
+{% endif %}
+
+<div class="product-subcategories">
+    <h3>Product Categories</h3>
+    <ul>
+        {% for subcategory in product_subcategories %}
+        <li>
+            {{ subcategory.english_product_subcategory_name }}: {{ subcategory.total_products }} products
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<!-- Shipped Orders Section for the individual user -->
+{% if user.is_authenticated and shipped_orders %}
+<div class="shipped-orders">
+    <h3>Shipped Orders</h3>
+    {% if shipped_orders %}
+    <ul>
+        {% for order in shipped_orders %}
+        <li>
+            Order Number: {{ order.sales_order_number }}<br>
+            <!--Product: {{ order.product.english_product_name }}<br> -->
+            <!--Order Date: {{ order.order_date_actual|date:"F d, Y" }}<br>-->
+            Shipped Date: {{ order.ship_date_actual|date:"F d, Y" }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>You have no shipped orders.</p>
+    {% endif %}
+</div>
+{% endif %}
+
+<!-- Link to View All Shipped Orders if the user has the necessary permission -->
+{% if user.is_authenticated and perms.catalog.can_mark_shipped %}
+<div class="view-all-shipped-orders">
+    <a href="{% url 'shipped-orders' %}">View All Shipped Orders</a>
+</div>
+{% endif %}
+
+{% endblock %}

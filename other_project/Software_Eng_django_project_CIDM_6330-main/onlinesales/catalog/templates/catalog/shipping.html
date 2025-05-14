@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h2>Shipped Orders</h2>
+<ul>
+    {% for order in shipped_orders %}
+    <li>
+        Order Number: {{ order.sales_order_number }}<br>
+        Product: {{ order.product }}<br>
+        Order Date: {{ order.order_date_actual|date:"F d, Y" }}<br>
+        Shipped Date: {{ order.ship_date_actual }}
+    </li>
+    {% empty %}
+    <li>No shipped orders found.</li>
+    {% endfor %}
+</ul>
+{% endblock %}

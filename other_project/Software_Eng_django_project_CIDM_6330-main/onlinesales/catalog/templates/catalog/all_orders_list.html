@@ -1,0 +1,23 @@
+{% extends 'catalog/base_generic.html' %}
+
+{% block content %}
+<h2>All Orders</h2>
+<table>
+    <tr>
+        <th>Order Number</th>
+        <th>Customer</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    {% for order in orders %}
+    <tr>
+        <td>{{ order.sales_order_number }}</td>
+        <td>{{ order.customer }}</td>
+        <td>{{ order.get_status_display }}</td>
+        <td>
+            <a href="{% url 'update-order-status' pk=order.pk %}">Update Status</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

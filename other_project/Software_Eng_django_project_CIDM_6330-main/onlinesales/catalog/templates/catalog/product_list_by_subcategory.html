@@ -1,0 +1,12 @@
+{% extends 'catalog/base_generic.html' %}
+
+{% block content %}
+<h2>Products</h2>
+<ul>
+    {% for product in products %}
+    <li>
+        <a href="{% url 'product-detail' product.id %}">{{ product.english_product_name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
