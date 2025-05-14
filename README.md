@@ -10,7 +10,7 @@ This portfolio showcases projects that demonstrate my technical skillset and pra
 
 ## 🧾 What You’ll Find in This Portfolio
 
-This repository is organized as a comprehensive, production-ready **fraud detection system** with a clear folder structure and modular components.
+This repository is organized as a comprehensive, production-ready **fraud detection system** with a clear folder structure and modular components. Also in this repository is the directory **other_project/** which docments and highlights some other projects done in diffenent.
 
 ## 💡 Project Focus: Fraud Detection System
 
